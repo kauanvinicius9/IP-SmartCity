@@ -1,0 +1,8 @@
+env
+
+# python -m venv env
+# .\env\Scripts\Activate
+# pip install django djangorestframework djangorestframework-simplejwt pandas python-dotenv
+# django-admin startproject nome
+# cd nome
+# python manage.py startapp nome2
