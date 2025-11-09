@@ -7,7 +7,7 @@
 ---
 
 ```powershell
-git clone https://github.com/Kauan19-hub/Integrator.git
+git clone https://github.com/Kauan19-hub/SmartCity-PI.git
 ```
 
 ###
