@@ -1,6 +1,6 @@
 import pandas as pd
 from django.core.management.base import BaseCommand
-from sensores.models import Ambiente, Local, Responsavel
+from sensores.models import Historico, Sensor, Ambiente
 
 class Command(BaseCommand):
 
@@ -15,34 +15,35 @@ class Command(BaseCommand):
         except Exception as e:
             self.stderr.write(self.style.ERROR(f"Erro ao ler CSV {e}"))
             
-        required = ["local", "descricao", "responsavel"]
+        required = ["sensor", "valor", "ambiente"]
         for column in required:
             if column not in df.columns:
                 self.stderr.write(self.style.ERROR(f"O arquivo precisa da coluna {column}"))
+                return
                 
         counter = 0
             
         for _, row in df.iterrows():
             try:
-                local_id = int(row["local"])
-                descricao = str(row["descricao"]).strip()
-                responsavel_id = int(row["responsavel"])
+                sensor_id = int(row["sensor"])
+                valor = str(row["valor"]).strip()
+                ambiente_id = int(row["ambiente"])
                 
-                local = Local.objects.filter(id=local_id).first()
-                responsavel = Responsavel.objects.filter(id=responsavel_id).first()
+                sensor = Sensor.objects.filter(idSensor=sensor_id).first()
+                ambiente = Ambiente.objects.filter(id=ambiente_id).first()
                 
-                if not local:
-                    self.stderr.write(self.style.WARNING(f"Local ID {local_id} não identificado"))
+                if not sensor:
+                    self.stderr.write(self.style.WARNING(f"Sensor ID {sensor_id} não identificado"))
                     continue
                 
-                if not responsavel:
-                    self.stderr.write(self.style.WARNING(f"Responsável ID {responsavel_id} não identificado"))
+                if not ambiente:
+                    self.stderr.write(self.style.WARNING(f"Ambiente ID {ambiente_id} não identificado"))
                     continue
                 
-                Ambiente.objects.get_or_create(
-                    local=local,
-                    description=descricao,
-                    responsable=responsavel
+                Historico.objects.get_or_create(
+                    sensor=sensor,
+                    valor=valor,
+                    ambiente=ambiente
                 )
                 
                 counter += 1
@@ -50,4 +51,4 @@ class Command(BaseCommand):
             except Exception as e:
                   self.stderr.write(self.style.ERROR(f"Erro ao exibir a linha {e}"))
                   
-        self.stdout.write(self.style.SUCCESS(f"{counter} ambientes importados com sucesso!"))
+        self.stdout.write(self.style.SUCCESS(f"{counter} históricos importados com sucesso!"))

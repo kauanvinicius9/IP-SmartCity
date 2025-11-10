@@ -9,11 +9,22 @@ class Command(BaseCommand):
 
     def handle(self,*args,**options):
         path = options["arquivo"]
-        df = pd.read_csv(path)
-
-        for _, row in df.iterrows():
-            nome = str(row.get("nome") or row.get("Nome") or "").lower()
-            if nome:
-                obj, _ = Responsavel.objects.get_or_create(nome=nome)
         
-        self.stdout.write(self.style.SUCCESS("Responsáveis importados com sucesso!"))
+        try:
+            df = pd.read_csv(path, encoding="utf-8-sig")
+        except Exception as e:
+            self.stderr.write(self.style.ERROR(f"Erro ao ler CSV {e}"))
+            return
+        
+        if "nome" not in df.columns and "Nome" not in df.columns:
+             self.stderr.write(self.style.ERROR(f"Seu arquivo precisa ter uma coluna chamada 'nome' ou ' Nome'"))
+             return
+         
+        counter = 0
+        for _, row in df.iterrows():
+            nome = str(row.get("nome") or row.get("Nome") or "").strip()
+            if nome :
+                Responsavel.objects.get_or_create(nome=nome)
+                counter += 1
+        
+        self.stdout.write(self.style.SUCCESS(f"{counter} responsáveis importados com sucesso!"))

@@ -56,9 +56,9 @@ class Sensor(models.Model):
         return f"{self.idSensor} - {self.tipoSensor} - {self.identifSensor}"
     
 class Historico(models.Model):
-    sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name="historico")
-    valor = models.DecimalField(max_digits=12, decimal_places=4)
-    ambiente = models.ForeignKey(Ambiente, on_delete=models.SET_NULL, null=True, blank=True)
+    sensor = models.ForeignKey(Sensor,on_delete=models.CASCADE,related_name="historico")
+    valor = models.DecimalField(max_digits=12,decimal_places=4)
+    ambiente = models.ForeignKey(Ambiente,on_delete=models.SET_NULL,null=True,blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
