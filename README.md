@@ -26,31 +26,32 @@ git clone https://github.com/Kauan19-hub/SmartCity-PI.git
 | Package | Version |
 |---------|---------|
 |asgiref  |                     `3.10.0` |
-|Django   |                     `5.2.8` |
+|django   |                     `5.2.8` |
 |djangorestframework |          `3.16.1` |
 |djangorestframework_simplejwt | `5.5.1` |
 |pip |                          `25.3` |
 |PyJWT |                        `2.10.1` |
 |sqlparse |                     `0.5.3` |
 |tzdata |                       `2025.2` |
+|django-cors-headers |          `4.9.0`|
 
 ###
-```python
+```powershell
 python manage.py pop_responsaveis dados/responsaveis.csv
 ```
 
 ###
-```python
+```powershell
 python manage.py pop_locais dados/locais.csv
 ```
 
 ###
-```python
+```powershell
 python manage.py pop_ambientes dados/ambientes.csv
 ```
 
 ###
-```python
+```powershell
 python manage.py pop_sensores dados/sensores.csv
 ```
 
@@ -62,10 +63,10 @@ from django.contrib.auth.models import User
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        user = "kauan"
+        username = "kauan"
         password = "12345"
         if not User.objects.filter(username=username).exists():
-            User.objects.create_superuser(user=user,email="",password=password)
+            User.objects.create_superuser(username=username,email="",password=password)
             self.stdout.write(self.style.SUCCESS("Usuário 'kauan' criado! Sua senha atual é 12345"))
         else:
             self.stdout.write("Usuário já existe.")
@@ -78,22 +79,22 @@ python manage.py create_default_superuser
 ```
 
 ###
-```python
+```powershell
 python manage.py makemigrations
 ```
 
 ###
-```python
+```powershell
 python manage.py migrate
 ```
 
 ###
-```python
-python manage.py create_default_superuser  # senai/12345
+```powershell
+python manage.py create_default_superuser  # kauan/12345
 ```
 
 ###
-```python
+```powershell
 python manage.py runserver
 ```
 
@@ -119,6 +120,11 @@ api_smart/
 │  ├─ urls.py
 │  └─ admin.py
 └─ manage.py
+```
+
+###
+```powershell
+pip install django-cors-headers
 ```
 
 ---
