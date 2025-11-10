@@ -121,6 +121,16 @@ api_smart/
 └─ manage.py
 ```
 
+###
+```python
+pip install django
+```
+
+###
+```python
+pip install djangorestframework
+```
+
 ---
 
 | Resource	| Description	| Difficult | Responsable |
