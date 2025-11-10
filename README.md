@@ -56,20 +56,19 @@ python manage.py pop_sensores dados/sensores.csv
 
 ###
 ```python
-# sensores/management/commands/create_default_superuser.py
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        username = "senai"
-        password = "1234"
+        user = "kauan"
+        password = "12345"
         if not User.objects.filter(username=username).exists():
-            User.objects.create_superuser(username=username, email="", password=password)
-            self.stdout.write(self.style.SUCCESS("Superuser 'senai' criado com senha '1234'"))
+            User.objects.create_superuser(user=user,email="",password=password)
+            self.stdout.write(self.style.SUCCESS("Usuário 'kauan' criado! Sua senha atual é 12345"))
         else:
-            self.stdout.write("Superuser já existe.")
+            self.stdout.write("Usuário já existe.")
 ```
 
 ---
