@@ -99,30 +99,6 @@ python manage.py runserver
 ```
 
 ###
-```
-api_smart/
-├─ api_smart/
-│  ├─ settings.py
-│  ├─ urls.py
-│  └─ ...
-├─ sensores/
-│  ├─ migrations/
-│  ├─ management/
-│  │  └─ commands/
-│  │     ├─ pop_responsaveis.py
-│  │     ├─ pop_locais.py
-│  │     ├─ pop_ambientes.py
-│  │     ├─ pop_sensores.py
-│  │     └─ create_default_superuser.py
-│  ├─ models.py
-│  ├─ serializers.py
-│  ├─ views.py
-│  ├─ urls.py
-│  └─ admin.py
-└─ manage.py
-```
-
-###
 ```powershell
 pip install django-cors-headers
 ```
