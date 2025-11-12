@@ -28,6 +28,13 @@ git clone https://github.com/Kauan19-hub/SmartCity-PI.git
  "editor.fontFamily": "Arial",
 ```
 
+###
+```json
+"name.of.project": "Digital City",
+```
+
+###
+
 | Package | Version |
 |---------|---------|
 |asgiref  |                     `3.10.0` |
