@@ -7,7 +7,8 @@
 ###
 
 - [https://www.django.com](https://www.djangoproject.com/)<br>
-- [https://www.pythonanywhere.com](https://www.pythonanywhere.com/)
+- [https://www.pythonanywhere.com](https://www.pythonanywhere.com/)<br>
+- [https://www.angular.dev](https://angular.dev/)
 
 ---
 
@@ -118,4 +119,21 @@ pip install django-cors-headers
 | **Deploy**	| Up to `PythonAnywhere`	| Hard 🔴 | Kauan - Full-Stack |
 
 ---
+
+**<h2>✅ Front-End Screen</h2>**
+
+###
+
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/6ff52825-4b81-4395-82a7-643ab8941209" />
+
+###
+
+**<h2>✅ Back-End Screen</h2>**
+
+###
+
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/223ceff9-a088-41a5-b175-b6929b3528ac" />
+
+
+
 
