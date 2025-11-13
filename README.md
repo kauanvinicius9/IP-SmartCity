@@ -133,6 +133,27 @@ pip install django-cors-headers
 
 ---
 
+```powershell
+npm install -g @angular/cli
+```
+
+###
+```powershell
+ng new my-angular-app
+```
+
+###
+```powershell
+cd my-angular-app
+```
+
+###
+```powershell
+ng serve
+```
+
+###
+
 <div align="left">
   <img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo" title="TailwindCSS" />
   <img width="1" />
