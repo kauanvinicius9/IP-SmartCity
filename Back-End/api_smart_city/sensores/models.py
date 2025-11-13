@@ -14,11 +14,11 @@ class Local(models.Model):
     
 class Ambiente(models.Model):
     local = models.ForeignKey(Local, on_delete=models.CASCADE, related_name='ambiente')
-    description = models.TextField(blank=True)
-    responsable = models.ForeignKey(Responsavel, on_delete=models.SET_NULL, null=True, blank=True)
+    descricao = models.TextField(blank=True)
+    responsavel = models.ForeignKey(Responsavel, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.local.nome} - {self.description[:40]}"
+        return f"{self.local.nome} - {self.descricao[:40]}"
     
 class Sensor(models.Model):
     SENSOR_TYPES = [
@@ -35,13 +35,13 @@ class Sensor(models.Model):
     tipoSensor = models.CharField(max_length=25, choices=SENSOR_TYPES)
     identifSensor = models.CharField(max_length=110, unique=True)
     unidadeMedSensor = models.CharField(max_length=25, blank=True)
-    latidudeSensor = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    latitudeSensor = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
     longitudeSensor = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
     statusSensor = models.CharField(max_length=12, choices=STATUS, default="ativo")
     ambienteSensor = models.ForeignKey(Ambiente, on_delete=models.SET_NULL, null=True, blank=True)
     timestampSensor = models.DateTimeField(auto_now_add=True)
 
-    def save_all(self, *args, **kwargs):
+    def save(self, *args, **kwargs):
         if not self.unidadeMedSensor:
             unidade = {
                 "temperatura": "°C",
