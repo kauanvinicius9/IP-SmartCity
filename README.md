@@ -8,7 +8,6 @@
 
 - [https://www.django.com](https://www.djangoproject.com/)<br>
 - [https://www.pythonanywhere.com](https://www.pythonanywhere.com/)<br>
-- [https://www.angular.dev](https://angular.dev/)<br>
 - [Schedule PI](https://docs.google.com/spreadsheets/d/12AE5yBveux_2cIrt4mSIaHuZQShaH1ww/edit?usp=drive_link&ouid=108717680234956090795&rtpof=true&sd=true)
 
 ---
