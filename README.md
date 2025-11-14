@@ -144,8 +144,6 @@ pip install django-cors-headers
   <img width="1" /><br>
   <img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo" title="GitHub" />
   <img width="1" />
-  <img src="https://skillicons.dev/icons?i=figma" height="40" alt="figma logo" title="Figma" />
-  <img width="1" />
   <img src="https://skillicons.dev/icons?i=py" height="40" alt="python logo" title="Python" />
   <img width="1" />
   <img src="https://skillicons.dev/icons?i=django" height="40" alt="django logo" title="Django" />
