@@ -2,7 +2,7 @@
 
 ###
 
-**<h2>Integrator Project - SmartCity</h2>**
+**<h2>Welcome to the Django</h2>**
 
 ###
 
