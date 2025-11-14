@@ -138,8 +138,6 @@ pip install django-cors-headers
   <img width="1" />
   <img src="https://skillicons.dev/icons?i=html" height="40" alt="html5 logo" title="HTML5" />
   <img width="1" />
-  <img src="https://skillicons.dev/icons?i=ts" height="40" alt="typescript logo" title="TypeScript" />
-  <img width="1" />
   <img src="https://skillicons.dev/icons?i=vscode" height="40" alt="vscode logo" title="Visual Studio Code" />
   <img width="1" />
   <img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo" title="Git" />
