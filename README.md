@@ -124,6 +124,10 @@ pip install django-cors-headers
 
 ---
 
+<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/3893295a-4d1a-40a5-9a15-dbdaf974ced0" />
+
+###
+
 <div align="left">
   <img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo" title="TailwindCSS" />
   <img width="1" />
@@ -132,7 +136,7 @@ pip install django-cors-headers
   <img src="https://skillicons.dev/icons?i=vscode" height="40" alt="vscode logo" title="Visual Studio Code" />
   <img width="1" />
   <img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo" title="Git" />
-  <img width="1" /><br>
+  <img width="1" />
   <img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo" title="GitHub" />
   <img width="1" />
   <img src="https://skillicons.dev/icons?i=py" height="40" alt="python logo" title="Python" />
