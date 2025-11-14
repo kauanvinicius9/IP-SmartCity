@@ -35,7 +35,7 @@ git clone https://github.com/Kauan19-hub/SmartCity-PI.git
 "author": "Kauan Vinícius",
 "skill": "Full-Stack Jr",
 "created_at": ["2025", "November"],
-"main_languages": ["Python", "Django", "Angular", "Node"],
+"main_languages": ["Python", "Django"],
 "api_url": "http://localhost:8000/",
 ```
 
