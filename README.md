@@ -125,7 +125,7 @@ pip install django-cors-headers
 
 | Resource	| Description	| Difficult | Responsable |
 ----------|-----------|-------------|--------------|
-| JWT Authentication |	Login and token access `with djangorestframework-simplejwt` |	Medium 🟠 | Kauan - Full-Stack |
+| JWT Authentication |	Login and token access `with djangorestframework-simplejwt` |	Med 🟠 | Kauan - Full-Stack |
 | Script `pop_bd.py` |	Populate the database with simulated data using `pandas` or `Faker` |	Low 🟢 | Kauan - Full-Stack |
 | CORS |	Allow the Angular Front-End to access the API `django-cors-headers` |	Low 🟢 | Kauan - Full-Stack |
 | Filter by environment/sensor	| Ex: “/historico?sensor=3” |	Low 🟢 | Kauan - Full-Stack |
