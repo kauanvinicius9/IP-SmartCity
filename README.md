@@ -124,24 +124,39 @@ pip install django-cors-headers
 
 ---
 
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=vscode" height="35" alt="vscode logo" title="Visual Studio Code" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=git" height="35" alt="git logo" title="Git" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=github" height="35" alt="github logo" title="GitHub" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=py" height="35" alt="python logo" title="Python" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=django" height="35" alt="django logo" title="Django" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=mysql" height="35" alt="mysql logo" title="SQL" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=sqlite" height="35" alt="sqlite logo" title="SQLite" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=postman" height="35" alt="postman logo" title="Postman" />
-</div>
+```powershell
+npm install -g @angular/cli
+```
 
 ###
+
+```powershell
+ng new my-angular-app
+```
+
+###
+```powershell
+cd my-angular-app
+```
+
+###
+```powershell
+ng serve
+```
+
+###
+
+<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/a05c2305-9fb6-4a72-a264-cf576a9c9372" />
+
+###
+
+https://angular.dev/tools/cli<br>
+https://angular.dev/tools/language-service<br>
+https://angular.dev/tools/devtools<br>
+https://angular.dev/ai/develop-with-ai<br>
+https://angular.dev/tutorials<br>
+https://angular.dev/
+
+---
 
 
