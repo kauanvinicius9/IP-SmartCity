@@ -150,12 +150,12 @@ ng serve
 
 ###
 
-https://angular.dev/tools/cli<br>
-https://angular.dev/tools/language-service<br>
-https://angular.dev/tools/devtools<br>
-https://angular.dev/ai/develop-with-ai<br>
-https://angular.dev/tutorials<br>
-https://angular.dev/
+- https://angular.dev/tools/cli<br>
+- https://angular.dev/tools/language-service<br>
+- https://angular.dev/tools/devtools<br>
+- https://angular.dev/ai/develop-with-ai<br>
+- https://angular.dev/tutorials<br>
+- https://angular.dev/
 
 ---
 
