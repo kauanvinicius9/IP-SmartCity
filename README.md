@@ -117,11 +117,6 @@ python manage.py create_default_superuser  # senai123
 python manage.py runserver
 ```
 
-###
-```powershell
-pip install django-cors-headers
-```
-
 ---
 
 **<h2>🎨 Prototype Figma</h2>**
