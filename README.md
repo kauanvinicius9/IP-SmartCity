@@ -6,10 +6,11 @@
 
 ###
 
-- [https://www.django.com](https://www.djangoproject.com/)<br>
-- [https://www.pythonanywhere.com](https://www.pythonanywhere.com/)<br>
-- [Schedule PI](https://docs.google.com/spreadsheets/d/12AE5yBveux_2cIrt4mSIaHuZQShaH1ww/edit?usp=drive_link&ouid=108717680234956090795&rtpof=true&sd=true)<br>
-- [Documentation (PDF)](https://drive.google.com/file/d/1ZADSvh_EBaQ-8oVm2wRKCsbV9ZOU4rSC/view?usp=drive_link)
+- [https://www.django.com](https://www.djangoproject.com/);<br>
+- [https://www.pythonanywhere.com](https://www.pythonanywhere.com/);<br>
+- [Schedule PI](https://docs.google.com/spreadsheets/d/12AE5yBveux_2cIrt4mSIaHuZQShaH1ww/edit?usp=drive_link&ouid=108717680234956090795&rtpof=true&sd=true);<br>
+- [Documentation (PDF)](https://drive.google.com/file/d/1ZADSvh_EBaQ-8oVm2wRKCsbV9ZOU4rSC/view?usp=drive_link);<br>
+- [https://react.dev.com](https://react.dev/)
 
 ---
 
@@ -133,6 +134,8 @@ cd {name}
 ```powershell
 npm run dev
 ```
+
+# tabela com versoes do node 
 
 ---
 
