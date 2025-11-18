@@ -136,6 +136,7 @@ npm run dev
 ```
 
 # tabela com versoes do node 
+# alterar capa do readme
 
 ---
 
