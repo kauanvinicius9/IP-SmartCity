@@ -126,7 +126,7 @@ npx create-react-app {name}
 
 ###
 ```powershell
-cd {nome}
+cd {name}
 ````
 
 ###
