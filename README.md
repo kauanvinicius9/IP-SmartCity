@@ -119,6 +119,23 @@ python manage.py runserver
 
 ---
 
+###
+```powershell
+npx create-react-app {name}
+```
+
+###
+```powershell
+cd {nome}
+````
+
+###
+```powershell
+npm run dev
+```
+
+---
+
 **<h2>🎨 Prototype Figma</h2>**
 
 ###
