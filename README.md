@@ -34,7 +34,7 @@
 
 ###
 
-<h6>Visual Studio Code Interface | Downloads for different operating systems</h6>
+<h6>Visual Studio Code Interface -- Official WebSite | Downloads for different operating systems</h6>
 
 ###
 
