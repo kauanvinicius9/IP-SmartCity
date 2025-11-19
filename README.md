@@ -18,7 +18,7 @@
 [Deploy Software](https://www.pythonanywhere.com/);
 <br>
 <br>
-[Schedule PI](https://docs.google.com/spreadsheets/d/12AE5yBveux_2cIrt4mSIaHuZQShaH1ww/edit?usp=drive_link&ouid=108717680234956090795&rtpof=true&sd=true);
+[Schedule IP](https://docs.google.com/spreadsheets/d/12AE5yBveux_2cIrt4mSIaHuZQShaH1ww/edit?usp=drive_link&ouid=108717680234956090795&rtpof=true&sd=true);
 <br>
 <br>
 [Documentation (PDF)](https://drive.google.com/file/d/1ZADSvh_EBaQ-8oVm2wRKCsbV9ZOU4rSC/view?usp=drive_link);
