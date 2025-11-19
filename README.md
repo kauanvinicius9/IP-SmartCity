@@ -135,9 +135,38 @@ cd {name}
 npm run dev
 ```
 
-# tabela com versoes do node 
-# alterar capa do readme
+---
 
+```json
+{
+  "name": "smartcity",
+  "version": "0.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "smartcity",
+      "version": "0.0.0",
+      "dependencies": {
+        "@hookform/resolvers": "^5.2.2",
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0",
+        "react-hook-form": "^7.66.0",
+        "react-router-dom": "^7.9.6"
+      },
+      "devDependencies": {
+        "@eslint/js": "^9.39.1",
+        "@types/react": "^19.2.2",
+        "@types/react-dom": "^19.2.2",
+        "@vitejs/plugin-react": "^5.1.0",
+        "eslint": "^9.39.1",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "eslint-plugin-react-refresh": "^0.4.24",
+        "globals": "^16.5.0",
+        "vite": "^7.2.2"
+      }
+    },
+```
 ---
 
 **<h2>🎨 Prototype Figma</h2>**
@@ -148,9 +177,9 @@ npm run dev
 
 ###
 
-<div align="center">
+<div align="left">
  <a href="https://www.figma.com/design/vG8RTChmcSyf97XEXaLjbY/Digital-City?m=auto&t=dsPRO4pmuNon2C56-6" title="Access to my Prototype">
-  <img width="400" height="400" alt="Figma" src="https://github.com/user-attachments/assets/4779996d-18e5-46fd-8a77-03ff97f915cf" />
+  <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/6942a592-155b-497f-85f5-dd733b519851" />
  </a>
 </div>
 
