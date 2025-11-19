@@ -6,11 +6,23 @@
 
 ###
 
-- [https://www.django.com](https://www.djangoproject.com/);<br>
-- [https://www.pythonanywhere.com](https://www.pythonanywhere.com/);<br>
+- [Django WebSite](https://www.djangoproject.com/);<br>
+- [Install Python](https://www.python.org/);<br>
+- [DevOps & CI/CD](https://www.postman.com/downloads/);<br>
+- [Deploy Software](https://www.pythonanywhere.com/);<br>
 - [Schedule PI](https://docs.google.com/spreadsheets/d/12AE5yBveux_2cIrt4mSIaHuZQShaH1ww/edit?usp=drive_link&ouid=108717680234956090795&rtpof=true&sd=true);<br>
 - [Documentation (PDF)](https://drive.google.com/file/d/1ZADSvh_EBaQ-8oVm2wRKCsbV9ZOU4rSC/view?usp=drive_link);<br>
-- [https://react.dev.com](https://react.dev/).
+- [React WebSite](https://react.dev/);<br>
+- [Source Code-Editor](https://code.visualstudio.com/download);<br>
+- [Install Node.JS](https://nodejs.org/pt).
+
+###
+
+<h6>Visual Studio Code Interface | Downloads for different operating systems</h6>
+
+###
+
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/b203c64a-f8e8-45f9-9a23-9691dc6ade41" />
 
 ---
 
