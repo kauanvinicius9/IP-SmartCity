@@ -1,24 +1,23 @@
 .header {
     font-family: Arial;
-    background: var(--dark-green);
     width: 100vw;
     height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
+    margin: 0 -40px;
     text-align: center;
 
 }
 
 .title {
-    color: var(--altered-white);
+    color: #24CAB6;
     
 }
 
 .logo {
     height:100px ;
     width: auto;
-    animation: giro 10s linear infinite;
 
 }

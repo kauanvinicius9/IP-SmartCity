@@ -1,5 +1,5 @@
 * {
-    background-color: var(--altered-white);
+    background-color: #F5F5F5;
 }
 
 .container {
@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    transform: translateY(30px);
 
 }
 
@@ -25,24 +26,23 @@
 }
 
 .title {
-    font-family: 'Orbitron', sans-serif;
     text-align: center;
     margin-bottom: 10px;
     font-size: 1.8rem;
-    color: var(--black-text);
+    color: #24CAB6;
     font-weight: 700;
 
 }
 
 label {
     font-size: 1rem;
-    color: var(--black-text);
+    color: #0E0E0E;
     
 }
 
 input {
     padding: 12px 14px;
-    border: 0.1px solid var(--gray);
+    border: 0.1px solid #B7B7B7;
     font-size: 1rem;
     outline: none;
 
@@ -51,8 +51,8 @@ input {
 .button {
     margin-top: 10px;
     padding: 14px;
-    background: var(--medium-green);
-    color: var(--altered-white);
+    background-color: #729163;
+    color: #F5F5F5;
     border: none;
     font-size: 1.1rem;
     cursor: pointer;
@@ -60,14 +60,30 @@ input {
 }
 
 .button:disabled {
-    background-color: var(--gray);
+    background-color: #B7B7B7;
     cursor: no-drop;
     opacity: 0.6;
 
 }
 
 .error {
-    color: var(--red-text);
+    color: #D21111;
     text-align: center;
+
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    gap: 0px;            
+    margin-bottom: 20px;
+
+}
+
+.logo {
+    height: 80px;  
+    width: 80px;
+    transform: translateY(6px);
 
 }

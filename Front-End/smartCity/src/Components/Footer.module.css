@@ -1,9 +1,13 @@
 .footer {
-  background: var(--gray);
-  opacity: 0.8;
-  color: var(--altered-black);
-  padding: 8px;
+  background-color: #B7B7B7;
+  font-family: Arial, sans-serif;
+  color: #0E0E0E;
+  padding: 1px;
   text-align: center;
 
 }
 
+.footer * {
+  background: transparent !important;
+
+}

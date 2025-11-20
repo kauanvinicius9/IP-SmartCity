@@ -1,6 +1,6 @@
 .body {
   font-family: Arial;
-  background: var(--altered-white);
+  background: #F5F5F5;
   flex: 1;
   display: flex;
   justify-content: center;  
@@ -19,8 +19,8 @@
 }
 
 .menuItem {
-  background: var(--medium-green);
-  color: var(--altered-white);    
+  background: #729163;
+  color: #F5F5F5;    
   padding: 17px 50px;
   text-align: center;
   text-decoration: none;
@@ -34,6 +34,7 @@
 }
 
 .menuItem:hover {
+  background-color: #293325;
   transform: translateY(-4px) scale(1.05);
   cursor: pointer;
 

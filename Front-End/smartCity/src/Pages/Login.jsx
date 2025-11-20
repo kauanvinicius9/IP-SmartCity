@@ -38,12 +38,15 @@ export function Login() {
     const buttonDisabled = !(usernameValue && passwordValue);
 
     return (
+
         <section className={style.container}>
             <form className={style.forms} onSubmit={handleSubmit(sendData)}>
 
-                <h2 className={style.title}>Digital City</h2>
+                <div className={style.logoContainer}>
+                    <img src="./src/assets/logo.png" alt="Logo" className={style.logo} />
+                    <h2 className={style.title}>Digital City</h2>
+                </div>
 
-         
                 <label htmlFor="usuario">Usuário:</label>
                 <input id="usuario" type="text" placeholder="Digite seu usuário" {...register("username")}/>
 
