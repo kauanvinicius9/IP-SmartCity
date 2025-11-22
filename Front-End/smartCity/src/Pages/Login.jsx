@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
+import api from "../services/api"; 
 
 const schemaLogin = z.object({
     username: z.string().trim().min(1, 'Digite seu usuário'),
@@ -26,11 +27,22 @@ export function Login() {
     const usernameValue = watch("username");
     const passwordValue = watch("password");
 
-    function sendData(data) {
-        if (data.username === 'senai' && data.password === '123') {
-            console.log("Login realizado:",data);
+    async function sendData(data) {
+        try {
+            const res = await api.post("/token/", {
+                username: data.username,
+                password: data.password
+            });
+
+            localStorage.setItem("access", res.data.access);
+            localStorage.setItem("refresh", res.data.refresh);
+
+            console.log("Login realizado:", res.data);
+
             navigate("/inicial");
-        } else {
+
+        } catch (err) {
+            console.log(err);
             setAuthError("Usuário ou senha inválido");
         }
     }
@@ -38,7 +50,6 @@ export function Login() {
     const buttonDisabled = !(usernameValue && passwordValue);
 
     return (
-
         <section className={style.container}>
             <form className={style.forms} onSubmit={handleSubmit(sendData)}>
 
@@ -48,10 +59,10 @@ export function Login() {
                 </div>
 
                 <label htmlFor="usuario">Usuário:</label>
-                <input id="usuario" type="text" placeholder="Digite seu usuário" {...register("username")}/>
+                <input id="usuario" type="text" placeholder="Digite seu usuário" {...register("username")} />
 
                 {errors.username && (
-                    <p className={style.erro}>{errors.username.message}</p>
+                    <p className={style.error}>{errors.username.message}</p>
                 )}
 
                 <label htmlFor="senha">Senha:</label>

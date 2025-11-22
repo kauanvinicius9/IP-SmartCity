@@ -41,8 +41,8 @@ class Command(BaseCommand):
                 
                 Ambiente.objects.get_or_create(
                     local=local,
-                    description=descricao,
-                    responsable=responsavel
+                    descricao=descricao,
+                    responsavel=responsavel
                 )
                 
                 counter += 1
