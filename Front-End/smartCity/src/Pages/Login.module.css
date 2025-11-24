@@ -1,5 +1,6 @@
 * {
     background-color: #F5F5F5;
+
 }
 
 .container {
@@ -9,7 +10,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    transform: translateY(30px);
+    transform: translateY(50px);
 
 }
 
@@ -37,29 +38,45 @@
 label {
     font-size: 1rem;
     color: #0E0E0E;
+    transform: translateY(9px);
+    margin: 0 12px;
     
 }
 
 input {
     padding: 12px 14px;
-    border: 0.1px solid #B7B7B7;
+    border: 2px solid #B7B7B7;
+    border-radius: 25px;
     font-size: 1rem;
     outline: none;
 
 }
 
-.button {
-    margin-top: 10px;
+input::placeholder {
+    font-size: 13px;
+    transform: translateX(7px);
+
+}
+
+input:focus {
+    border-color: #24CAB6;
+}
+
+.buttonLogin {
+    margin-top: 20px;
+    width: 600px;
+    margin: 10px auto;
     padding: 14px;
     background-color: #729163;
-    color: #F5F5F5;
+    border-radius: 25px;
     border: none;
+    color: #F5F5F5;
     font-size: 1.1rem;
     cursor: pointer;
 
 }
 
-.button:disabled {
+.buttonLogin:disabled {
     background-color: #B7B7B7;
     cursor: no-drop;
     opacity: 0.6;
@@ -87,4 +104,74 @@ input {
     width: 80px;
     transform: translateY(6px);
 
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        padding: 10px;
+        transform: translateY(130px);
+
+    }
+
+    .forms {
+        padding: 30px 25px;
+        max-width: 450px;
+
+    }
+
+    .buttonLogin {
+        width: 100%;
+        max-width: 450px;
+
+    }
+
+    input {
+        font-size: 0.95rem;
+        padding: 11px 12px;
+
+    }
+
+    .logo {
+        height: 70px;
+        width: 70px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .forms {
+        padding: 25px 20px;
+        max-width: 95%;
+
+    }
+
+    label {
+        margin-left: 5px;
+
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 10px 11px;
+
+    }
+
+    .buttonLogin {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+
+    }
+
+    .logo {
+        height: 60px;
+        width: 60px;
+
+    }
+
+    .title {
+        font-size: 1.6rem;
+
+    }
 }

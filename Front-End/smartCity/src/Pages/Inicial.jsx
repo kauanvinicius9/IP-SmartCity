@@ -1,18 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "../Pages/Inicial.module.css";
-
-const Header = () => (
-  <header style={{ padding: "10px", background: "#333", color: "#fff" }}>
-    <h1>Meu Header</h1>
-  </header>
-);
-
-const Footer = () => (
-  <footer style={{ padding: "10px", background: "#333", color: "#fff", marginTop: "auto" }}>
-    <p>Meu Footer</p>
-  </footer>
-);
+import { Footer } from "../Components/Footer";
+import { Header } from "../Components/Header";
 
 export default function Inicial() {
   const [dados, setDados] = useState([]);
@@ -40,8 +30,7 @@ export default function Inicial() {
       <Header />
 
       <main style={{ flex: 1 }}>
-        <h1>Painel Inicial</h1>
-        <button onClick={handleClick}>Carregar Dados</button>
+        <button onClick={handleClick} className={style.btn}>Carregar Dados</button>
 
         {loading && <p className={style.error}>Carregando...</p>}
         {error && <p className={style.error}>{error}</p>}
@@ -50,40 +39,82 @@ export default function Inicial() {
           {dados.map((item, index) => (
             <div className={style.card} key={index}>
               
-              <h3>Sensor #{item.idSensor}</h3>
-              <p><strong>Tipo:</strong> {item.tipoSensor}</p>
-              <p><strong>Identificação:</strong> {item.identifSensor}</p>
-              <p><strong>Unidade:</strong> {item.unidadeMedSensor}</p>
-
-              <p><strong>Status:</strong> {item.statusSensor}</p>
+              <h3 className={style.sensor}>Sensor {item.idSensor}</h3>
 
               <p>
+                <strong>Tipo:</strong>{" "}
+                <span className={style.colorSpan}>
+                  {item.tipoSensor}
+                </span>
+              </p>
+
+              <p>
+                <strong>Identificação:</strong>{" "}
+                <span className={style.colorSpan}>
+                    {item.identifSensor}
+                </span>
+              </p>
+
+              <p>
+                <strong>Unidade:</strong>{" "}
+                <span className={style.colorSpan}>
+                  {item.unidadeMedSensor}
+                </span>
+              </p>
+
+              <p>
+                <strong>Status:</strong>{" "}
+                <span className={style.colorSpan2}>
+                  {item.statusSensor}
+                </span>
+              </p>
+ 
+              <p>
                 <strong>Ambiente:</strong>{" "}
-                <span style={{ color: item.ambienteSensor ? "#000" : "#999" }}>
+                <span className={style.colorSpan}>
                   {item.ambiente_nome || "N/A"}
                 </span>
               </p>
 
               <p>
                 <strong>Local:</strong>{" "}
-                {item.local_nome || "N/A"}
+                <span className={style.colorSpan}>
+                  {item.local_nome || "N/A"}
+                </span>
               </p>
 
               <p>
                 <strong>Responsável:</strong>{" "}
-                {item.responsavel_nome || "N/A"}
+                <span  className={style.colorSpan}>
+                  {item.responsavel_nome || "N/A"}
+                </span>
               </p>
 
-              <p><strong>Latitude:</strong> {item.latitudeSensor ?? "N/A"}</p>
-              <p><strong>Longitude:</strong> {item.longitudeSensor ?? "N/A"}</p>
+              <p>
+                <strong>Latitude:</strong>{" "}
+                <span  className={style.colorSpan}>
+                  {item.latitudeSensor ?? "N/A"}
+                </span>
+              </p>
 
-              <p><strong>Registrado em:</strong> {item.timestampSensor}</p>
+              <p>
+                <strong>Longitude:</strong>{" "}
+                <span  className={style.colorSpan}>
+                  {item.longitudeSensor ?? "N/A"}
+                </span>
+              </p>
 
-              <Link to="/" className={style.back}></Link>
+              <p>
+                <strong>Registrado em:</strong>{" "}
+                <span  className={style.colorSpan}>
+                 {item.timestampSensor}
+                </span>
+              </p>
+
             </div>
 
-            
-          ))}
+))}
+         <Link to="/" className={style.back}>Voltar</Link> 
         </div>
       </main>
 

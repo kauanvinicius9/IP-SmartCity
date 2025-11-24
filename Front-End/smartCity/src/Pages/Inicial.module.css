@@ -1,19 +1,37 @@
 .painel {
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
 }
 
-button {
-  padding: 10px 20px;
-  margin-bottom: 20px;
+.btn {
+  display: block;
+  padding: 15px 33px;
+  margin: 90px auto;
+  font-size: 17px;
+  border-radius: 23px;
+  background-color: #729163;
+  border: none;
+  color: #F5F5F5;
   cursor: pointer;
+  transition: 0.3s ease;
+
+}
+
+.btn:hover {
+  background-color: #293325;
 
 }
 
 .error {
   color: #d21111;
   margin: 10px 0;
+  text-align: center;
 
 }
 
@@ -21,14 +39,85 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  justify-content: center;
 
 }
 
 .card {
   background-color: #f7f7f7;
+  margin-bottom: 17px;
   border-radius: 8px;
   padding: 15px;
-  width: 200px;
+  width: 220px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.4s;
 
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+
+}
+
+.sensor {
+  font-size: 23px;
+  text-align: center;
+
+}
+
+.colorSpan {
+  color: #B7B7B7;
+
+}
+
+.colorSpan2 {
+  background-color: #CDFFCD;
+  color: #293325;
+  padding: 2px 8px;
+  border-radius: 8px;
+
+}
+
+.back {
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #0E0E0E;
+
+}
+
+.back:hover {
+  color: #0088FF;
+  
+}
+
+@media (max-width: 768px) {
+  button {
+    margin-top: 80px;
+    padding: 12px 28px;
+
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 15px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    margin-top: 60px;
+    width: 80%;
+
+  }
+
+  .painel {
+    padding: 10px;
+
+  }
 }

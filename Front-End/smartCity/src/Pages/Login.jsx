@@ -37,9 +37,6 @@ export function Login() {
             localStorage.setItem("access", res.data.access);
             localStorage.setItem("refresh", res.data.refresh);
 
-            console.log("Login efetuado:", res.data);
-            console.log("Sistema em operação:", res.data);
-
             navigate("/inicial");
 
         } catch (err) {
@@ -77,7 +74,7 @@ export function Login() {
                     <p className={style.error}>{authError}</p>
                 )}
 
-                <button className={style.button} disabled={buttonDisabled}>Entrar</button>
+                <button className={style.buttonLogin} disabled={buttonDisabled}>Entrar</button>
             </form>
         </section>
     );
