@@ -75,21 +75,21 @@ export default function Inicial() {
               <p>
                 <strong>Ambiente:</strong>{" "}
                 <span className={style.colorSpan}>
-                  {item.ambiente_nome || "N/A"}
+                  {item.nome || "N/A"}
                 </span>
               </p>
 
               <p>
                 <strong>Local:</strong>{" "}
                 <span className={style.colorSpan}>
-                  {item.local_nome || "N/A"}
+                  {item.nome || "N/A"}
                 </span>
               </p>
 
               <p>
                 <strong>Responsável:</strong>{" "}
                 <span  className={style.colorSpan}>
-                  {item.responsavel_nome || "N/A"}
+                  {item.nome || "N/A"}
                 </span>
               </p>
 
