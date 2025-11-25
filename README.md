@@ -198,6 +198,14 @@ npm run dev
       }
     },
 ```
+
+**<h2>TailwindCSS Download</h2>**
+
+###
+```powershell
+npm install -D tailwindcss postcss autoprefixer
+````
+
 ---
 
 **<h2>🎨 Prototype Figma</h2>**
