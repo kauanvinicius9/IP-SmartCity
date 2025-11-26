@@ -199,43 +199,6 @@ npm run dev
     },
 ```
 
-**<h2>TailwindCSS Download</h2>**
-
-###
-```powershell
-npm install -D tailwindcss postcss autoprefixer
-```
-
-###
-```json
- "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.17",
-```
-
-###
-```ts
-module.exports = {
-    content: [
-        "./index.html",
-        "./src/**/*.{js,jsx,ts,tsx",
-    ],
-    theme: {
-        extend: {},
-    },
-    plugins: [],
-};
-```
-
-###
-```ts
-module.exports = {
-    plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-    },
-};
-```
-
 ---
 
 # React + Vite
