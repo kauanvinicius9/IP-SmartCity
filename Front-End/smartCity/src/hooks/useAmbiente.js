@@ -12,4 +12,3 @@ export function useAmbiente() {
 
     return data;
 }
-A
