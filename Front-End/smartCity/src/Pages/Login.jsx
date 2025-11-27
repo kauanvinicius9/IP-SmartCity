@@ -7,8 +7,9 @@ import { useState } from 'react';
 import api from "../services/api";
 
 const schemaLogin = z.object({
-    username: z.string().trim().min(1, 'Digite seu usuário'),
-    password: z.string().trim().min(1, 'Digite sua senha'),
+    username: z.string().trim().min(1),
+    password: z.string().trim().min(1)
+
 });
 
 export function Login() {
@@ -22,7 +23,10 @@ export function Login() {
         formState: { errors },
     } = useForm({
         resolver: zodResolver(schemaLogin),
+        mode: "onChange"
     });
+
+    console.log(errors);
 
     const usernameValue = watch("username");
     const passwordValue = watch("password");
@@ -59,16 +63,8 @@ export function Login() {
                 <label htmlFor="usuario">Usuário:</label>
                 <input id="usuario" type="text" placeholder="Digite seu usuário" {...register("username")} />
 
-                {errors.username && (
-                    <p className={style.error}>{errors.username.message}</p>
-                )}
-
                 <label htmlFor="senha">Senha:</label>
                 <input id="senha" type="password" placeholder="Digite sua senha" {...register("password")} />
-
-                {errors.password && (
-                    <p className={style.error}>{errors.password.message}</p>
-                )}
 
                 {authError && (
                     <p className={style.error}>{authError}</p>
