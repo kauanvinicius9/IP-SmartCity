@@ -201,7 +201,7 @@ npm run dev
 
 ---
 
-**URL Back-End**
+<h6>URL Back-End</h6>
 
 ###
 
@@ -209,14 +209,14 @@ npm run dev
 http://127.0.0.1:8000/api/sensor/
 ```
 
-**URL Django Admin**
+<h6>URL Django Admin</h6>
 
 ###
 ```powershell
 http://127.0.0.1:8000/admin
 ```
 
-**URL Django API**
+<h6>URL Django API</h6>
 
 ###
 ```powershell
@@ -225,14 +225,14 @@ http://127.0.0.1:8000/api
 
 ###
 
-**URL Front-End**
+<h6>URL Front-End</h6>
 
 ###
 ```powershell
 http://localhost:5173/
 ```
 
-**Output React**
+<h6>Output React</h6>
 
 ###
 
@@ -242,7 +242,7 @@ http://localhost:5173/
   ➜  press h + enter to show help
 ```
 
-**Output Django**
+<h6>Output Django</h6>
 
 ###
 
