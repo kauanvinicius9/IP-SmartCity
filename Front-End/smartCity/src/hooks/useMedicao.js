@@ -12,4 +12,3 @@ export function useMedicao() {
 
     return data;
 }
-A
