@@ -13,7 +13,7 @@
   margin: 90px auto;
   font-size: 17px;
   border-radius: 23px;
-  background-color: #0072FF;
+  background-color: #0088FF;
   border: none;
   color: #F5F5F5;
   cursor: pointer;
@@ -22,7 +22,7 @@
 }
 
 .btn:hover {
-  background-color: #0A59C9;
+  background-color: #004499;
 
 }
 
@@ -52,11 +52,6 @@
 
 }
 
-.card:hover {
-  transform: translateY(-10px);
-
-}
-
 footer {
   width: calc(100% + 40px);
   margin-left: -30px;
@@ -66,7 +61,7 @@ footer {
 }
 
 .sensor {
-  font-size: 23px;
+  font-size: 28px;
   text-align: center;
 
 }
@@ -99,6 +94,78 @@ footer {
   
 }
 
+.buttonCard {
+  display: flex;
+  background-color: #0088FF;
+  border: none;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  justify-content: center;
+  padding: 10px 82px;
+  align-items: center;
+  transition: 0.4s ease;
+
+}
+
+.buttonCard:hover {
+  background-color: #004499;
+
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  animation: fadeIn 0.3s ease forwards;
+
+}
+
+.modal {
+  background-color: #FFFFFF;
+  width: 450px;
+  max-width: 90%;
+  padding: 25px;
+  border-radius: 19px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+  transform: scale(0.8);
+  opacity: 0;
+  animation: zoomIn 0.35s ease forwards;
+
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+
+  }
+}
+
 @media (max-width: 768px) {
   button {
     margin-top: 80px;
@@ -110,6 +177,10 @@ footer {
     width: 90%;
     margin-bottom: 15px;
 
+  }
+
+  .buttonCard {
+    padding: 10px 161px;
   }
 }
 

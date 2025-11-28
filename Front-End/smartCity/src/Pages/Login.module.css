@@ -54,7 +54,6 @@ input {
 }
 
 input:focus {
-    box-shadow: 0 0 8px #0072FF;
     border-color: #0072FF;
 }
 

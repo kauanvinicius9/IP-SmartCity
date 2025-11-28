@@ -11,6 +11,15 @@ export default function Inicial() {
   const [dados, setDados] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const openModal = (item) => {
+    setSelectedItem(item);
+  };
+
+  const closeModal = (item) => {
+    setSelectedItem(null);
+  };
 
   const handleClick = async () => {
     setLoading(true);
@@ -41,6 +50,7 @@ export default function Inicial() {
         {error && <p className={style.error}>{error}</p>}
 
           <div className={style.cardsContainer}>
+
           {dados.map((item, index) => (
             <div className={style.card} key={index}>
               
@@ -54,7 +64,7 @@ export default function Inicial() {
               </p>
 
               <p>
-                <strong>Identificação:</strong>{" "}
+                <strong>Identificação:</strong>{""}
                 <span className={style.colorSpan}>
                     {item.identifSensor}
                 </span>
@@ -115,12 +125,100 @@ export default function Inicial() {
                  {item.timestampSensor}
                 </span>
               </p>
+
+              <button className={style.buttonCard} onClick={() => openModal(item)}>
+                Ver mais
+              </button>
             </div>
         ))}
 
             <Link to="/" className={style.back}>Voltar</Link> 
           </div>
       </main>
+
+      {selectedItem && (
+        <div className={style.modalOverlay} onClick={closeModal}>
+          <div className={style.modal} onClick={(e) => e.stopPropagation()}>
+            <h2>Sensor {selectedItem.idSensor}</h2>
+
+             <p>
+                <strong>Tipo:</strong>{" "}
+                <span className={style.colorSpan}>
+                  {selectedItem.tipoSensor}
+                </span>
+              </p>
+
+
+              <p>
+                <strong>Identificação:</strong>{" "}
+                <span className={style.colorSpan}>
+                    {selectedItem.identifSensor}
+                </span>
+              </p>
+
+              <p>
+                <strong>Umidade:</strong>{" "}
+                <span className={style.colorSpan}>
+                  {selectedItem.unidadeMedSensor}
+                </span>
+              </p>
+
+              <p>
+                <strong>Status:</strong>{" "}
+                <span className={style.colorSpan2}>
+                  {selectedItem.statusSensor}
+                </span>
+              </p>
+ 
+              <p>
+                <strong>Ambiente:</strong>{" "}
+                <span className={style.colorSpan}>
+                  {selectedItem.ambiente_nome || "N/A"}
+                </span>
+              </p>
+
+              <p>
+                <strong>Local:</strong>{" "}
+                <span className={style.colorSpan}>
+                  {selectedItem.local_nome || "N/A"}
+                </span>
+              </p>
+
+              <p>
+                <strong>Responsável:</strong>{" "}
+                <span  className={style.colorSpan}>
+                  {selectedItem.responsavel_nome || "N/A"}
+                </span>
+              </p>
+
+              <p>
+                <strong>Latitude:</strong>{" "}
+                <span  className={style.colorSpan}>
+                  {selectedItem.latitudeSensor ?? "N/A"}
+                </span>
+              </p>
+
+              <p>
+                <strong>Longitude:</strong>{" "}
+                <span  className={style.colorSpan}>
+                  {selectedItem.longitudeSensor ?? "N/A"}
+                </span>
+              </p>
+
+              <p>
+                <strong>Registrado em:</strong>{" "}
+                <span  className={style.colorSpan}>
+                 {selectedItem.timestampSensor}
+                </span>
+              </p>
+
+              <button className={style.buttonCard} onClick={() => closeModal(selectedItem)}>
+                Fechar
+              </button>
+        </div>
+      </div>
+
+      )}
 
       <Footer/>
     </div>

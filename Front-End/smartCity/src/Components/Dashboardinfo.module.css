@@ -41,3 +41,12 @@
     color: #0088FF;
 
 }
+
+.approved {
+    background-color: #CDFFCD;
+    padding: 10px 10px;
+    border-radius: 12px;
+    margin-top: 5px;
+    display: inline-block;
+
+}
