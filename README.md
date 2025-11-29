@@ -118,7 +118,7 @@ class Command(BaseCommand):
         password = "123"
         if not User.objects.filter(username=username).exists():
             User.objects.create_superuser(username=username,email="",password=password)
-            self.stdout.write(self.style.SUCCESS("Usuário 'senai' criado! Sua senha atual é 123"))
+            self.stdout.write(self.style.SUCCESS(f"Usuário {username} criado! Sua senha atual é {password}"))
         else:
             self.stdout.write("Usuário já existe.")
 ```
