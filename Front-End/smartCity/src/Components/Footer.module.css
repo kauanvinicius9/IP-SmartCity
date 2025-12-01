@@ -1,7 +1,7 @@
 .footer {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #0E0E0E;
+  color: var(--altered_dark);
   padding: 1px;
   display: flex;
   justify-content: center;
@@ -16,6 +16,7 @@
 
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .footer {
      padding: 12px 10px;
@@ -24,6 +25,7 @@
   }
 }
 
+/* Responsividade */
 @media (min-width: 1024px) and (max-width: 1440px) {
   .footer {
     padding: 14px 30px;

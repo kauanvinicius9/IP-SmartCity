@@ -8,13 +8,16 @@
     padding: 10px;
     margin: 0 -40px;
     text-align: center;
+
 }
 
 .title {
-    color: #24CAB6;
+    color: var(--turquoise);
+
 }
 
 .logo {
     height:100px ;
     width: auto;
+    
 }

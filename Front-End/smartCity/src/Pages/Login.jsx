@@ -50,7 +50,7 @@ export function Login() {
         } catch (err) {
             console.log(err);
             alert("Usuário ou senha inválido");
-            setAuthError("Usuário ou senha inválido");
+ 
         }
     }
 

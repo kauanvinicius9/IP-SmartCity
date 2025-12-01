@@ -1,5 +1,6 @@
 body {
-    background-color: #F5F5F5;
+    background-color: var(--altered_white);
+
 }
 
 .container {
@@ -16,7 +17,7 @@ body {
 .forms {
     padding: 40px 35px;
     border-radius: 16px;
-    background-color: #F5F5F5;
+    background-color: var(--altered_white);
     width: 100%;
     max-width: 600px;
     display: flex;
@@ -30,14 +31,14 @@ body {
     text-align: center;
     margin-bottom: 10px;
     font-size: 1.8rem;
-    color: #0E0E0E;
+    color: var(--altered_black);
     font-weight: 700;
 
 }
 
 label {
     font-size: 1rem;
-    color: #0E0E0E;
+    color: var(--altered_black);
     transform: translateY(10px);
     margin: 0 8px;
     
@@ -45,7 +46,7 @@ label {
 
 input {
     padding: 12px 14px;
-    border: 2px solid #B7B7B7;
+    border: 2px solid var(--gray);
     border-radius: 25px;
     font-size: 1rem;
     outline: none;
@@ -54,7 +55,7 @@ input {
 }
 
 input:focus {
-    border-color: #0072FF;
+    border-color: var(--blue);
 }
 
 .buttonLogin {
@@ -62,10 +63,10 @@ input:focus {
     width: 600px;
     margin: 10px auto;
     padding: 14px;
-    background: linear-gradient(135deg, #0072FF, #0A59C9);
+    background: linear-gradient(135deg, var(--blue), var(--bright_blue));
     border-radius: 25px;
     border: none;
-    color: #F5F5F5;
+    color: var(--altered_white);
     font-size: 1.1rem;
     cursor: pointer;
 

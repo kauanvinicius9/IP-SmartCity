@@ -1,5 +1,5 @@
 .container {
-    background-color: #FFFFFF;
+    background-color: var(--white);
     padding: 40px;
     border-radius: 18px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
@@ -19,7 +19,7 @@
     font-size: 25px;
     font-weight: 600;
     margin: 0 14px;
-    color: #000000;
+    color: var(--black);
 
 }
 
@@ -31,19 +31,19 @@
 
 .users {
     padding: 13px 10px;
-    color: #B7B7B7;
+    color: var(--gray);
     font-size: 18px;
     font-weight: 500;
 
 }
 
 .number {
-    color: #0088FF;
+    color: var(--bright_blue);
 
 }
 
 .approved {
-    background-color: #CDFFCD;
+    background-color: var(--light_green);
     padding: 10px 10px;
     border-radius: 12px;
     margin-top: 5px;

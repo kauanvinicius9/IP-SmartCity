@@ -1,1 +1,14 @@
-/* Página vazia */
+/* Página de variáveis de cores */
+:root {
+    --altered_dark: #0E0E0E;
+    --dark: #000000;
+    --bright_blue: #004499;
+    --altered_white: #F5F5F5;
+    --white: #FFFFFF;
+    --gray: #B7B7B7;
+    --turquoise: #24CAB6;
+    --blue: #0088FF;
+    --light_green: #CDFFCD;
+    --red: #D21111;
+
+}
