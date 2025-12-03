@@ -265,15 +265,10 @@ Performing system checks...
 
 ###
 
-<div align="left">
-  <a href="https://www.postman.com/downloads/">
-   <img src="https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=black&style=for-the-badge" height="30" alt="postman logo" title="Access the Postman" />
-  </a>
-  <img width="1" />
-  <a href="https://insomnia.rest/download/">
-   <img src="https://img.shields.io/badge/insomnia-5E00D3?logo=insomnia&logoColor=white&style=for-the-badge" height="30" alt="insomnia logo" title="Access the Insomnia" /> 
-  </a>
-</div>
+[Install Postman -> API Test](https://www.postman.com/downloads/);
+<br>
+<br>
+[Install Insomnia -> API Test 2](https://insomnia.rest/download/).
 
 ###
 
