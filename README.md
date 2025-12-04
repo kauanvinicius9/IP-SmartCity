@@ -272,6 +272,92 @@ Performing system checks...
 
 ###
 
+**<h6>Token</h6>**
+
+###
+
+Method `POST`:
+
+###
+
+```
+http://127.0.0.1:8000/api/token/
+```
+
+###
+
+`BODY` - `JSON`
+
+###
+
+**<h6>Output</h6>**
+
+```json
+{
+	"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NDk0MzIyMCwiaWF0IjoxNzY0ODU2ODIwLCJqdGkiOiIwMjcwMzE4Yjk3ZmE0YjhkYmYxZTk0NmU1ZWRjNTg0ZCIsInVzZXJfaWQiOiIxIn0.im4eMIYq0KDaF5QJqHxs2DzAOWav0a_Ln8tYsD6SUB0",
+	"access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0ODYwNDIwLCJpYXQiOjE3NjQ4NTY4MjAsImp0aSI6IjMwZDNiNDQzZjgyMjQwNzZhOThlMWZlN2Q0MDhlNzVlIiwidXNlcl9pZCI6IjEifQ.mZk3khn2pL0d6pT3L_T8oLqHPDsdL-yoQd6oJpAydaU"
+}
+```
+
+---
+
+**<h6>Token</h2>**
+
+###
+
+```python
+class TokenListCreate(TokenObtainPairView):
+    serializer_class = TokenObtainPairSerializer
+```
+
+###
+
+```python
+path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+```
+
+###
+
+**<h6>Access token</h2>**
+
+###
+
+```
+http://127.0.0.1:8000/api/sensor -- AUTH -- BEARER TOKEN -- Refresh Code
+```
+
+###
+
+```js
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0ODYwNDIwLCJpYXQiOjE3NjQ4NTY4MjAsImp0aSI6IjMwZDNiNDQzZjgyMjQwNzZhOThlMWZlN2Q0MDhlNzVlIiwidXNlcl9pZCI6IjEifQ.mZk3khn2pL0d6pT3L_T8oLqHPDsdL-yoQd6oJpAydaU
+```
+
+###
+
+**<h6>Output</h6>**
+
+###
+```js
+[
+	{
+		"idSensor": 1,
+		"local_nome": null,
+		"responsavel_nome": null,
+		"tipoSensor": "temperatura",
+		"identifSensor": "temperatura_0",
+		"unidadeMedSensor": "°C",
+		"latitudeSensor": null,
+		"longitudeSensor": null,
+		"statusSensor": "ativo",
+		"timestampSensor": "2025-11-21T03:34:17.232555Z",
+		"ambienteSensor": null
+	},
+..... # Continue
+]
+```
+
+###
+
 **<h6>Oficial Documentation React and Vite</h6>**
 
 ###
