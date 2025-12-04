@@ -31,9 +31,6 @@
 <br>
 <br>
 [Install Node.JS](https://nodejs.org/pt);
-<br>
-<br>
-[Apresentation Canva](https://www.canva.com/design/DAG5kgfZnsg/9FH1eMmFDjmhvffwtBH86Q/edit).
 
 ###
 
@@ -268,6 +265,103 @@ Performing system checks...
 
 ###
 
+[Install Postman ➜ API Test](https://www.postman.com/downloads/);
+<br>
+<br>
+[Install Insomnia ➜ API Test 2](https://insomnia.rest/download/).
+
+###
+
+**<h6>Token</h6>**
+
+###
+
+Method `POST`:
+
+###
+
+```
+http://127.0.0.1:8000/api/token/
+```
+
+###
+
+`BODY` - `JSON`
+
+###
+
+**<h6>Output</h6>**
+
+```json
+{
+	"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NDk0MzIyMCwiaWF0IjoxNzY0ODU2ODIwLCJqdGkiOiIwMjcwMzE4Yjk3ZmE0YjhkYmYxZTk0NmU1ZWRjNTg0ZCIsInVzZXJfaWQiOiIxIn0.im4eMIYq0KDaF5QJqHxs2DzAOWav0a_Ln8tYsD6SUB0",
+	"access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0ODYwNDIwLCJpYXQiOjE3NjQ4NTY4MjAsImp0aSI6IjMwZDNiNDQzZjgyMjQwNzZhOThlMWZlN2Q0MDhlNzVlIiwidXNlcl9pZCI6IjEifQ.mZk3khn2pL0d6pT3L_T8oLqHPDsdL-yoQd6oJpAydaU"
+}
+```
+
+---
+
+**<h6>Token</h2>**
+
+###
+
+```python
+class TokenListCreate(TokenObtainPairView):
+    serializer_class = TokenObtainPairSerializer
+```
+
+###
+
+```python
+path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+```
+
+###
+
+**<h6>Access token</h2>**
+
+###
+
+```
+http://127.0.0.1:8000/api/sensor -- AUTH -- BEARER TOKEN -- Refresh Code
+```
+
+###
+
+```js
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0ODYwNDIwLCJpYXQiOjE3NjQ4NTY4MjAsImp0aSI6IjMwZDNiNDQzZjgyMjQwNzZhOThlMWZlN2Q0MDhlNzVlIiwidXNlcl9pZCI6IjEifQ.mZk3khn2pL0d6pT3L_T8oLqHPDsdL-yoQd6oJpAydaU
+```
+
+###
+
+**<h6>Output</h6>**
+
+###
+```js
+[
+	{
+		"idSensor": 1,
+		"local_nome": null,
+		"responsavel_nome": null,
+		"tipoSensor": "temperatura",
+		"identifSensor": "temperatura_0",
+		"unidadeMedSensor": "°C",
+		"latitudeSensor": null,
+		"longitudeSensor": null,
+		"statusSensor": "ativo",
+		"timestampSensor": "2025-11-21T03:34:17.232555Z",
+		"ambienteSensor": null
+	},
+..... # Continue
+]
+```
+
+###
+
+**<h6>Oficial Documentation React and Vite</h6>**
+
+###
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -303,85 +397,15 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ---
 
-*Front-End*
-
-###
-
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=html" height="35" alt="html5 logo" title="HTML5" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=js" height="35" alt="javascript logo" title="JavaScript" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=nodejs" height="35" alt="nodejs logo" title="NodeJS" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=css" height="35" alt="css logo" title="CSS" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=react" height="35" alt="react logo" title="React" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=vite" height="35" alt="vite logo" title="Vite" />
-</div>
-
-###
-
-*Tools*
-
-###
-
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=vscode" height="35" alt="vscode logo" title="Visual Studio Code" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=git" height="35" alt="git logo" title="Git" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=github" height="35" alt="github logo" title="GitHub" />
-</div>
-
-###
-
-*Back-End*
-
-###
-
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=py" height="35" alt="python logo" title="Python" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=django" height="35" alt="django logo" title="Django" />
-</div>
-
-###
-
-*DevOps*
-
-###
-
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=postman" height="35" alt="postman logo" title="Postman" />
-</div>
-
-###
-
-*Data-Base*
-
-###
-
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=mysql" height="35" alt="mysql logo" title="MySQL" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=sqlite" height="35" alt="sqlite logo" title="SQLite" />
-</div>
-
-###
-
-*UI/UX*
-
-###
-
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=figma" height="35" alt="figma logo" title="Figma" />
-  <img width="1" />
-  <img src="https://skillicons.dev/icons?i=ai" height="35" alt="adobeillustrator logo" title="Adobe Illustrator" />
-</div>
-
-###
-
+| Front-End | Back-End | Tools | DevOps | DataBase | UI/UX |
+|:-----------:|:----------:|:--------:|:--------:|:----------:|:--------:|
+| <img width="1" /> | <img width="1" /> | <img width="1" /> | <img width="1" /> | <img width="1" /> | <img width="1" /> |
+| <img src="https://skillicons.dev/icons?i=html" height="35" title="HTML5" /> | <img src="https://skillicons.dev/icons?i=py" height="35" title="Python" /> | <img src="https://skillicons.dev/icons?i=vscode" height="35" title="VSCode" /> | <img src="https://skillicons.dev/icons?i=postman" height="35" title="Postman" /> | <img src="https://skillicons.dev/icons?i=mysql" height="35" title="MySQL" /> | <img src="https://skillicons.dev/icons?i=figma" height="35" title="Figma" /> |
+| <img src="https://skillicons.dev/icons?i=js" height="35" title="JavaScript" /> | <img src="https://skillicons.dev/icons?i=django" height="35" title="Django" /> | <img src="https://skillicons.dev/icons?i=git" height="35" title="Git" /> |  | <img src="https://skillicons.dev/icons?i=sqlite" height="35" title="SQLite" /> | <img src="https://skillicons.dev/icons?i=ai" height="35" title="Adobe Illustrator" /> |
+| <img src="https://skillicons.dev/icons?i=nodejs" height="35" title="NodeJS" /> |  | <img src="https://skillicons.dev/icons?i=github" height="35" title="GitHub" /> |  |  |  |
+| <img src="https://skillicons.dev/icons?i=css" height="35" title="CSS" /> |  |  |  |  |  |
+| <img src="https://skillicons.dev/icons?i=react" height="35" title="React" /> |  |  |  |  |  |
+| <img src="https://skillicons.dev/icons?i=vite" height="35" title="Vite" /> |  |  |  |  |  |
+--------------------------------------------------------------------------------------------------
 
 
