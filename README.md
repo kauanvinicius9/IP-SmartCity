@@ -30,7 +30,7 @@
 [Source Code-Editor](https://code.visualstudio.com/download);
 <br>
 <br>
-[Install Node.JS](https://nodejs.org/pt);
+[Install Node.JS](https://nodejs.org/pt).
 
 ---
 
