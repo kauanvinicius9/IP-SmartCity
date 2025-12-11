@@ -5,6 +5,7 @@ from rest_framework import generics, permissions, filters, viewsets;
 from rest_framework.response import Response;
 
 from rest_framework.views import APIView;
+from rest_framework.generics import RetrieveUpdateDestroyAPIView;
 from .models import Responsavel, Ambiente, Local, Historico, Sensor;
 from .serializers import ResponsavelSerializer, AmbienteSerializer, LocalSerializer, HistoricoSerializer, SensoresSerializer;
 
@@ -68,6 +69,7 @@ class RUDAmbiente(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
 class HistoricoListCreate(generics.ListCreateAPIView):
+    queryset = Historico.objects.all()
     serializer_class = HistoricoSerializer
     permission_classes = [permissions.IsAuthenticated]
     filter_backends = [filters.OrderingFilter]

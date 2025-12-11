@@ -5,6 +5,9 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from . import views
 
 urlpatterns = [
+    path("historico/", views.HistoricoListCreate.as_view(), name="hist-list-create"),
+    path("historico/<int:pk>/", views.RUDHistorico.as_view(), name="rud-hist"),
+
     path('', lambda request: JsonResponse({'message': 'PI em andamento'})),
 
      path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
