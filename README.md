@@ -198,6 +198,14 @@ npm run dev
 
 ---
 
+**<h6>node_modules install</h6>**
+
+###
+
+`npm i` || `npm i --legac-peer-deps`
+
+###
+
 **<h6>Insomnia</h6>**
 
 ###
