@@ -32,14 +32,6 @@
 <br>
 [Install Node.JS](https://nodejs.org/pt);
 
-###
-
-<h6>Visual Studio Code Interface -- Official WebSite | Downloads for different operating systems</h6>
-
-###
-
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/b203c64a-f8e8-45f9-9a23-9691dc6ade41" />
-
 ---
 
 ```powershell
@@ -197,6 +189,18 @@ npm run dev
 ```
 
 ---
+
+**OBS.:** We can delete, update, and delete a sensor through the testing software.
+
+###
+
+**<h6>node_modules install</h6>**
+
+###
+
+`npm i` || `npm i --legac-peer-deps`
+
+###
 
 **<h6>Insomnia</h6>**
 
@@ -365,6 +369,8 @@ http://127.0.0.1:8000/api/token/
 }
 ```
 
+⚠ The token needs to be updated every 5 minutes by the testing software
+
 ---
 
 **<h6>Token</h6>**
@@ -394,12 +400,6 @@ http://127.0.0.1:8000/api/sensor -- AUTH -- BEARER TOKEN -- Refresh Code
 
 ###
 
-```js
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0ODYwNDIwLCJpYXQiOjE3NjQ4NTY4MjAsImp0aSI6IjMwZDNiNDQzZjgyMjQwNzZhOThlMWZlN2Q0MDhlNzVlIiwidXNlcl9pZCI6IjEifQ.mZk3khn2pL0d6pT3L_T8oLqHPDsdL-yoQd6oJpAydaU
-```
-
-###
-
 **<h6>Output</h6>**
 
 ###
@@ -423,6 +423,43 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY
 ```
 
 ###
+
+**<h6>Token Front-End - Validation React</h6>**
+
+###
+```python
+const token = localStorage.getItem("access"); ### The token jwt name is "access"
+console.log("Token enviado:", token);
+```
+
+###
+```python
+if (!token) {
+	setError("Token não identificado. Faça login novamente");
+	setLoading(false);
+	return;
+
+}
+```
+
+###
+```python
+const response = await fetch("http://127.0.0.1:8000/api/sensor/", {
+	headers: {
+		"Authorization": `Bearer ${token}`,
+		"Content-Type": "application/json"
+	}
+});
+```
+
+###
+```python
+if (!response.ok) {
+	throw new Error(`Erro ao buscar dados: ${response.status`);
+}
+```
+
+---
 
 **<h6>Oficial Documentation React and Vite</h6>**
 
@@ -473,6 +510,3 @@ If you are developing a production application, we recommend using TypeScript wi
 | <img src="https://skillicons.dev/icons?i=react" height="35" title="React" /> |  |  |  |  |  |
 | <img src="https://skillicons.dev/icons?i=vite" height="35" title="Vite" /> |  |  |  |  |  |
 --------------------------------------------------------------------------------------------------
-
----
-
