@@ -2,7 +2,7 @@
 
 ###
 
-**<h1>SmartCity | Full-Stack System</h1>**
+**<h1>SmartCity | Digital City</h1>**
 
 ###
 
