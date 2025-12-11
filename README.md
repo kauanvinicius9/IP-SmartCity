@@ -436,7 +436,18 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY
 
 ###
 ```python
-const token = localStorage.getItem("token", data.access);
+const token = localStorage.getItem("access"); ### The token jwt name is "access"
+console.log("Token enviado:", token);
+```
+
+###
+```python
+if (!token) {
+	setError("Token não identificado. Faça login novamente");
+	setLoading(false);
+	return;
+
+}
 ```
 
 ###
@@ -452,7 +463,7 @@ const response = await fetch("http://127.0.0.1:8000/api/sensor/", {
 ###
 ```python
 if (!response.ok) {
-	throw new Error("Erro ao buscar dados");
+	throw new Error(`Erro ao buscar dados: ${response.status`);
 }
 ```
 
