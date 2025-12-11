@@ -432,6 +432,32 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY
 
 ###
 
+**<h6>Token Front-End - Validation React</h6>**
+
+###
+```python
+const token = localStorage.getItem("token");
+```
+
+###
+```python
+const response = await fetch("http://127.0.0.1:8000/api/sensor/", {
+	headers: {
+		"Authorization": `Bearer ${token}`,
+		"Content-Type": "application/json"
+	}
+});
+```
+
+###
+```python
+if (!response.ok) {
+	throw new Error("Erro ao buscar dados");
+}
+```
+
+---
+
 **<h6>Oficial Documentation React and Vite</h6>**
 
 ###
