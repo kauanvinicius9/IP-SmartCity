@@ -159,6 +159,7 @@ npm run dev
 
 ```json
 {
+
   "name": "smartcity",
   "version": "0.0.0",
   "lockfileVersion": 3,
@@ -173,7 +174,9 @@ npm run dev
         "react-dom": "^19.2.0",
         "react-hook-form": "^7.66.0",
         "react-router-dom": "^7.9.6"
+
       },
+
       "devDependencies": {
         "@eslint/js": "^9.39.1",
         "@types/react": "^19.2.2",
@@ -184,6 +187,7 @@ npm run dev
         "eslint-plugin-react-refresh": "^0.4.24",
         "globals": "^16.5.0",
         "vite": "^7.2.2"
+
       }
     },
 ```
@@ -424,7 +428,7 @@ http://127.0.0.1:8000/api/sensor -- AUTH -- BEARER TOKEN -- Refresh Code
 
 ###
 
-**<h6>Token Front-End - Validation React</h6>**
+**<h6>Token Front-End React - Validation</h6>**
 
 ###
 ```python
