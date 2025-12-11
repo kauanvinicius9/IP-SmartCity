@@ -190,6 +190,10 @@ npm run dev
 
 ---
 
+**OBS.:** We can delete, update, and delete a sensor through the testing software.
+
+###
+
 **<h6>node_modules install</h6>**
 
 ###
@@ -365,6 +369,8 @@ http://127.0.0.1:8000/api/token/
 }
 ```
 
+⚠ The token needs to be updated every 5 minutes by the testing software
+
 ---
 
 **<h6>Token</h6>**
@@ -390,12 +396,6 @@ path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
 ```
 http://127.0.0.1:8000/api/sensor -- AUTH -- BEARER TOKEN -- Refresh Code
-```
-
-###
-
-```js
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0ODYwNDIwLCJpYXQiOjE3NjQ4NTY4MjAsImp0aSI6IjMwZDNiNDQzZjgyMjQwNzZhOThlMWZlN2Q0MDhlNzVlIiwidXNlcl9pZCI6IjEifQ.mZk3khn2pL0d6pT3L_T8oLqHPDsdL-yoQd6oJpAydaU
 ```
 
 ###
