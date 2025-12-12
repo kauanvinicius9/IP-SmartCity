@@ -31,12 +31,35 @@ export default function Inicial() {
     setError(null);
 
     try {
+
+      // Autenticação com Token JWT
+      const token = localStorage.getItem("access");
+      console.log("Token enviado:", token);
+
+      if (!token) {
+        setError("Token não identificado. Faça login novamente");
+        setLoading(false);
+        return;
+
+      }
+
       // Conexão com o Back-End e erro ao buscar os dados de lá
-      const response = await fetch("http://127.0.0.1:8000/api/sensor/");
+      const response = await fetch("http://127.0.0.1:8000/api/sensor/", {
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Content-Type": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Erro ao buscar dados: ${response.status}`);
+      }
+
       const data = await response.json();
       setDados(Array.isArray(data) ? data : data.results || []);
 
     } catch (err) {
+      console.log(err);
       setError("Erro ao buscar dados");
 
     } finally {

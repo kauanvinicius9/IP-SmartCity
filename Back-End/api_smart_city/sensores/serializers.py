@@ -45,8 +45,4 @@ class HistoricoSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         sensor = data.get("sensor")
-        if sensor and sensor.status == "inativo":
-            raise serializers.ValidationError(
-                "Não foi possível realizar o registro de medição: Sensor inativo"
-            )
         return data

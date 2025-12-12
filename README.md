@@ -1,8 +1,8 @@
-<h6>Private repository temporarily</h6>
+<h6>✅️ Approved</h6>
 
 ###
 
-**<h1>SmartCity | Full-Stack Project</h1>**
+**<h1>📊 SmartCity | Digital City</h1>**
 
 ###
 
@@ -30,21 +30,15 @@
 [Source Code-Editor](https://code.visualstudio.com/download);
 <br>
 <br>
-[Install Node.JS](https://nodejs.org/pt);
-
-###
-
-<h6>Visual Studio Code Interface -- Official WebSite | Downloads for different operating systems</h6>
-
-###
-
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/b203c64a-f8e8-45f9-9a23-9691dc6ade41" />
+[Install Node.JS](https://nodejs.org/pt).
 
 ---
 
 ```powershell
-git clone https://github.com/Kauan19-hub/SmartCity-PI.git
+git clone https://github.com/Kauan19-hub/Kauan-Vinicius.git
 ```
+
+**<h6>Editor and Terminal</h6>**
 
 ###
 ```json
@@ -167,6 +161,7 @@ npm run dev
 
 ```json
 {
+
   "name": "smartcity",
   "version": "0.0.0",
   "lockfileVersion": 3,
@@ -181,7 +176,9 @@ npm run dev
         "react-dom": "^19.2.0",
         "react-hook-form": "^7.66.0",
         "react-router-dom": "^7.9.6"
+
       },
+
       "devDependencies": {
         "@eslint/js": "^9.39.1",
         "@types/react": "^19.2.2",
@@ -192,11 +189,32 @@ npm run dev
         "eslint-plugin-react-refresh": "^0.4.24",
         "globals": "^16.5.0",
         "vite": "^7.2.2"
+
       }
     },
 ```
 
 ---
+
+**OBS.:** We can delete, update, and delete a sensor through the testing software.
+
+###
+
+**<h6>node_modules install</h6>**
+
+###
+
+`npm i` || `npm i --legac-peer-deps`
+
+###
+
+**<h6>Insomnia</h6>**
+
+###
+
+`PUT`, `DELETE`, `GET`, `POST` -- for all elements of the system. All with these methods inside each one's folder
+
+###
 
 <h6>URL Back-End</h6>
 
@@ -272,14 +290,72 @@ Performing system checks...
 
 ###
 
+Methods: `GET`, `POST`, `PUT`, `DELETE`
+
+###
+
+**<h6>Local</h6>**
+
+###
+```
+http://127.0.0.1:8000/api/local/
+```
+
+**<h6>Ambiente</h6>**
+
+###
+```
+http://127.0.0.1:8000/api/ambiente/
+```
+
+**<h6>Responsavel</h6>**
+
+###
+```
+http://127.0.0.1:8000/api/responsavel/
+```
+
+###
+
+**<h6>Sensor</h6>**
+
+###
+```
+http://127.0.0.1:8000/sensor/ || http://127.0.0.1:8000/api/sensor/
+```
+
+###
+
+**<h6>Histórico</h6>**
+
+###
+```
+http://127.0.0.1:8000/api/historico/
+```
+
+###
+
+**<h6>Django Admin</h6>**
+
+###
+```
+http://127.0.0.1:8000/admin/ || http://127.0.0.1:8000/api/admin/
+```
+
+###
+
+**<h6>Base</h6>**
+
+###
+```
+http://127.0.0.1:8000/
+```
+
+###
+
 **<h6>Token</h6>**
 
 ###
-
-Method `POST`:
-
-###
-
 ```
 http://127.0.0.1:8000/api/token/
 ```
@@ -299,9 +375,11 @@ http://127.0.0.1:8000/api/token/
 }
 ```
 
+⚠ The token needs to be updated every 5 minutes by the testing software
+
 ---
 
-**<h6>Token</h2>**
+**<h6>Token</h6>**
 
 ###
 
@@ -324,12 +402,6 @@ path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
 ```
 http://127.0.0.1:8000/api/sensor -- AUTH -- BEARER TOKEN -- Refresh Code
-```
-
-###
-
-```js
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0ODYwNDIwLCJpYXQiOjE3NjQ4NTY4MjAsImp0aSI6IjMwZDNiNDQzZjgyMjQwNzZhOThlMWZlN2Q0MDhlNzVlIiwidXNlcl9pZCI6IjEifQ.mZk3khn2pL0d6pT3L_T8oLqHPDsdL-yoQd6oJpAydaU
 ```
 
 ###
@@ -357,6 +429,43 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY
 ```
 
 ###
+
+**<h6>Token Front-End React - Validation</h6>**
+
+###
+```python
+const token = localStorage.getItem("access"); ### The token jwt name is "access"
+console.log("Token enviado:", token);
+```
+
+###
+```python
+if (!token) {
+	setError("Token não identificado. Faça login novamente");
+	setLoading(false);
+	return;
+
+}
+```
+
+###
+```python
+const response = await fetch("http://127.0.0.1:8000/api/sensor/", {
+	headers: {
+		"Authorization": `Bearer ${token}`,
+		"Content-Type": "application/json"
+	}
+});
+```
+
+###
+```python
+if (!response.ok) {
+	throw new Error(`Erro ao buscar dados: ${response.status`);
+}
+```
+
+---
 
 **<h6>Oficial Documentation React and Vite</h6>**
 
@@ -407,5 +516,3 @@ If you are developing a production application, we recommend using TypeScript wi
 | <img src="https://skillicons.dev/icons?i=react" height="35" title="React" /> |  |  |  |  |  |
 | <img src="https://skillicons.dev/icons?i=vite" height="35" title="Vite" /> |  |  |  |  |  |
 --------------------------------------------------------------------------------------------------
-
-
