@@ -29,7 +29,7 @@
 ---
 
 ```powershell
-git clone https://github.com/Kauan19-hub/Kauan-Vinicius.git
+git clone https://github.com/kauanvinicius9/IP-SmartCity.git
 ```
 
 **<h6>Editor and Terminal</h6>**
